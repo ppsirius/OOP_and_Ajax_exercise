@@ -1,0 +1,19 @@
+{
+  "author": "Piotr Pupczyk <piotrek@jakbyco.com>",
+  "dependencies": {
+    "gulp": "3.x",
+    "gulp-sass": "2.x",
+    "gulp-autoprefixer": "3.x",
+    "gulp-sourcemaps": "1.x",
+    "gulp-minify-css": "1.x",
+    "browser-sync": "2.x"
+  },
+  "description": "",
+  "directories": {
+    "lib": "./web_modules",
+    "dist": "./web/js"
+  },
+  "main": "boilerplate",
+  "name": "boilerplate",
+  "version": "0.0.1"
+}
