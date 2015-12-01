@@ -9,7 +9,7 @@
 - MapUser inherits from User, has new property: city and can display its city location
 on the map.
 - SuperUser has all properties and actions of WeatherUser and MapUser together.
-Users data can be stored in static JSON file or you can create any kind of backend to serve
+- Users data can be stored in static JSON file or you can create any kind of backend to serve
 users data.
 
 ###### Tasks:
