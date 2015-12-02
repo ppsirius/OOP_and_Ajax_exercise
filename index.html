@@ -40,21 +40,21 @@
 							</tr>
 						</thead>
 						<tbody class="list">
-							<tr class="element-list" data-user-id="1">
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-							</tr>
-							<tr class="element-list" data-user-id="2">
-								<th scope="row">2</th>
-								<td>Jacob</td>
-								<td>Thornton</td>
-							</tr>
-							<tr class="element-list" data-user-id="3">
-								<th scope="row">3</th>
-								<td>Larry</td>
-								<td>the Bird</td>
-							</tr>
+							<!--<tr class="element-list" data-user-id="1">-->
+								<!--<th scope="row">1</th>-->
+								<!--<td>Mark</td>-->
+								<!--<td>Otto</td>-->
+							<!--</tr>-->
+							<!--<tr class="element-list" data-user-id="2">-->
+								<!--<th scope="row">2</th>-->
+								<!--<td>Jacob</td>-->
+								<!--<td>Thornton</td>-->
+							<!--</tr>-->
+							<!--<tr class="element-list" data-user-id="3">-->
+								<!--<th scope="row">3</th>-->
+								<!--<td>Larry</td>-->
+								<!--<td>the Bird</td>-->
+							<!--</tr>-->
 						</tbody>
 					</table>
 					<p>
@@ -85,7 +85,20 @@
 				<p>&copy; <a href="http://jakbyco.com">jakbyco.com</a> 2015</p>
 			</footer>
 		</div> <!-- /container -->
+
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+
 		<script src="js/ajax.js"></script>
+		<script src="js/template.js"></script>
 		<script src="js/main.js"></script>
+
+		<script type="text/tmp" data-tmp>
+			<tr class="element-list" data-user-id="<#= id #>">
+				<th scope="row"><#= count #></th>
+				<td><#= data.firstName #></td>
+				<td><#= data.lastName #></td>
+			</tr>
+		</script>
 	</body>
 </html>

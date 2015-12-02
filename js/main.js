@@ -2,27 +2,24 @@ function log(){try{window.console.log.apply(window.console,arguments);}catch(e){
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    var tabel = document.querySelector('.list');
+    var table = document.querySelector('.list');
 
     (function(){
-        api.list(function(fn){
-            var list= fn;
+        var tmp = template(document.querySelector('[data-tmp]').innerHTML);
+        api.list(function(list){
             for(var i = 0; i < list.length; i++) {
-                var elementId = list[i].id,
-                    tr = document.createElement('tr'),
-                    th = document.createElement('th'),
-                    td = document.createElement('td');
-                tr.className = "element-list";
-                tr.dataset.user = elementId
-                tabel.appendChild(tr); // add tr container
+                log(list[i])
+                var data = list[i];
+                data.count = i+1;
 
-                //log(list[i].data.firstName);
+
+                $('<div></div>').html(tmp(data)).find('> *').appendTo($(table));
+
             };
 
 
         });
     })();
-
 
 }, false);
 
