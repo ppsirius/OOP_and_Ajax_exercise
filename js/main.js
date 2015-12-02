@@ -1,3 +1,36 @@
+function log(){try{window.console.log.apply(window.console,arguments);}catch(e){}};
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    var tabel = document.querySelector('.list');
+
+    (function(){
+        api.list(function(fn){
+            var list= fn;
+            for(var i = 0; i < list.length; i++) {
+                var elementId = list[i].id,
+                    tr = document.createElement('tr'),
+                    th = document.createElement('th'),
+                    td = document.createElement('td');
+                tr.className = "element-list";
+                tr.dataset.user = elementId
+                tabel.appendChild(tr); // add tr container
+
+                //log(list[i].data.firstName);
+            };
+
+
+        });
+    })();
+
+
+}, false);
+
+
+
+
+// Class
+
 function User(firstName, lastName, gender) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -34,13 +67,11 @@ MapUser.prototype.location = function() {
     // method for Google Maps
 }
 
-
-//function SuperUser(cityWeather, cityMap){
-//    WeatherUser.prototype.temp.call(this, cityWeather);
-//};
+//var user = new User("Jan", "Nowak", "male");
 //
+//var userJson = JSON.stringify(user);
+//
+//console.log(userJson);
+//
+//console.log(user);
 
-
-var user = new User("Jan", "Nowak", "male");
-
-console.log(user);
